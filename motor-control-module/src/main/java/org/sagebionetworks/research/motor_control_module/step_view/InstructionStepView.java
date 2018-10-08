@@ -51,6 +51,8 @@ import org.sagebionetworks.research.presentation.model.action.ActionView;
 import org.sagebionetworks.research.presentation.model.implementations.ActiveUIStepViewBase;
 import org.threeten.bp.Duration;
 
+import java.util.Map;
+
 public class InstructionStepView extends ActiveUIStepViewBase {
     public static final String TYPE = StepType.INSTRUCTION;
 
@@ -68,7 +70,8 @@ public class InstructionStepView extends ActiveUIStepViewBase {
                 activeUIStepView.getActions(), activeUIStepView.getTitle(), activeUIStepView.getText(),
                 activeUIStepView.getDetail(), activeUIStepView.getFootnote(), activeUIStepView.getColorTheme(),
                 activeUIStepView.getImageTheme(), activeUIStepView.getDuration(),
-                activeUIStepView.isBackgroundAudioRequired(), instructionStep.isFirstRunOnly());
+                activeUIStepView.getSpokenInstructions(), activeUIStepView.isBackgroundAudioRequired(),
+                instructionStep.isFirstRunOnly());
     }
 
     public InstructionStepView(@NonNull final String identifier, final int navDirection,
@@ -80,10 +83,11 @@ public class InstructionStepView extends ActiveUIStepViewBase {
             @Nullable final ColorThemeView colorTheme,
             @Nullable final ImageThemeView imageTheme,
             @NonNull final Duration duration,
+            @NonNull final Map<String, String> spokenInstructions,
             final boolean isBackgroundAudioRequired,
             final boolean isFirstRunOnly) {
         super(identifier, navDirection, actions, title, text, detail, footnote, colorTheme, imageTheme, duration,
-                isBackgroundAudioRequired);
+                spokenInstructions, isBackgroundAudioRequired);
         this.isFirstRunOnly = isFirstRunOnly;
     }
 

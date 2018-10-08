@@ -10,9 +10,11 @@ import org.sagebionetworks.research.motor_control_module.step_view.MPowerActiveU
 import org.sagebionetworks.research.presentation.inject.ShowStepViewModelModule.StepViewClassKey;
 import org.sagebionetworks.research.presentation.inject.StepViewModule.InternalStepViewFactory;
 import org.sagebionetworks.research.presentation.inject.StepViewModule.StepTypeKey;
+import org.sagebionetworks.research.presentation.inject.TextToSpeechModule;
 import org.sagebionetworks.research.presentation.model.interfaces.StepView;
 import org.sagebionetworks.research.presentation.show_step.show_step_view_model_factories.ShowStepViewModelFactory;
 import org.sagebionetworks.research.presentation.show_step.show_step_view_model_factories.ShowActiveUIStepViewModelFactory;
+import org.sagebionetworks.research.presentation.speech.TextToSpeechService;
 
 import dagger.Module;
 import dagger.Provides;
